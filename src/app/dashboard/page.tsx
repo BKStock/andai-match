@@ -55,8 +55,8 @@ type TxType = 'deposit' | 'usdt' | 'cash'
 
 const TX_STYLE: Record<TxType, { bg: string; color: string; icon: string; amountColor: string }> = {
   deposit: { bg: 'var(--pp-red-10)', color: 'var(--pp-red)',   icon: '⬆', amountColor: 'var(--pp-text)' },
-  usdt:    { bg: 'rgba(0,229,160,0.1)', color: 'var(--pp-green)', icon: '◎', amountColor: 'var(--pp-green)' },
-  cash:    { bg: 'rgba(255,179,0,0.1)', color: 'var(--pp-gold)',  icon: '¥', amountColor: 'var(--pp-text)' },
+  usdt:    { bg: 'var(--pp-green-10)', color: 'var(--pp-green)', icon: '◎', amountColor: 'var(--pp-green)' },
+  cash:    { bg: 'var(--pp-gold-10)', color: 'var(--pp-gold)',  icon: '¥', amountColor: 'var(--pp-text)' },
 }
 
 const MOCK_TX: Array<{

@@ -35,7 +35,7 @@ export default function LPPage() {
         position: 'relative', overflow: 'hidden',
         background: [
           'radial-gradient(ellipse 120% 80% at 50% -10%, var(--pp-red-18) 0%, transparent 60%)',
-          'radial-gradient(ellipse 70% 50% at 15% 110%, rgba(0,229,160,0.06) 0%, transparent 60%)',
+          'radial-gradient(ellipse 70% 50% at 15% 110%, var(--pp-green-06) 0%, transparent 60%)',
           'var(--pp-bg)',
         ].join(', '),
       }}>
@@ -43,8 +43,8 @@ export default function LPPage() {
           <div className="anim" style={{ display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
-              background: 'rgba(0,229,160,0.08)',
-              border: '1px solid rgba(0,229,160,0.2)',
+              background: 'var(--pp-green-08)',
+              border: '1px solid var(--pp-green-20)',
               borderRadius: 100, padding: '6px 14px',
               fontSize: 12, fontWeight: 700, color: 'var(--pp-green)',
             }}>
@@ -228,7 +228,7 @@ export default function LPPage() {
         <div className="pp-container" style={{ textAlign: 'center' }}>
           <div className="pp-card anim" style={{
             padding: '40px 24px',
-            background: 'linear-gradient(135deg, var(--pp-red-06), rgba(0,229,160,0.03))',
+            background: 'linear-gradient(135deg, var(--pp-red-06), var(--pp-green-03))',
           }}>
             <h2 className="syne-heading" style={{ fontSize: 'clamp(20px,5vw,26px)', marginBottom: 12, letterSpacing: '-0.5px' }}>
               <span className="jp-text">今すぐ無料登録</span>

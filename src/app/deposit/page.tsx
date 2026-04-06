@@ -341,7 +341,7 @@ export default function DepositPage() {
         <div style={{ maxWidth: 400, textAlign: 'center', width: '100%' }}>
           <div style={{
             width: 80, height: 80, borderRadius: '50%',
-            background: 'rgba(0,229,160,0.1)', border: '1px solid rgba(0,229,160,0.25)',
+            background: 'var(--pp-green-10)', border: '1px solid var(--pp-green-25)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 24px',
           }}>

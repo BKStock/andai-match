@@ -150,6 +150,13 @@
   --pp-red-12: rgba(229,57,53,0.12);
   --pp-red-18: rgba(229,57,53,0.18);
   --pp-red-20: rgba(229,57,53,0.20);
+  --pp-green-03: rgba(0,229,160,0.03);
+  --pp-green-06: rgba(0,229,160,0.06);
+  --pp-green-08: rgba(0,229,160,0.08);
+  --pp-green-10: rgba(0,229,160,0.10);
+  --pp-green-20: rgba(0,229,160,0.20);
+  --pp-green-25: rgba(0,229,160,0.25);
+  --pp-gold-10: rgba(255,179,0,0.10);
   --pp-shadow-red: 0 8px 32px rgba(229,57,53,0.35);
   --pp-shadow-red-hover: 0 12px 40px rgba(229,57,53,0.45);
   --pp-shadow-card: 0 1px 4px rgba(0,0,0,0.15);
