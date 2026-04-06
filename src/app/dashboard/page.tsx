@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Nav from '@/components/Nav'
-import { RATE_USDT, RATE_CASH, FEE_PCT } from '@/lib/rates'
+import { RATE_USDT, RATE_CASH_PER_1000, FEE_PCT } from '@/lib/rates'
 
 const MOCK_BALANCE = 12_450
 const MOCK_USDT = '80.25'
@@ -137,7 +137,7 @@ export default function DashboardPage() {
             <div className="pp-card" style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-around' }}>
               {[
                 { label: 'USDT', val: `${RATE_USDT} USDT`, sub: '/ ¥1,000', color: 'var(--pp-green)' },
-                { label: '現金/Cash', val: `¥${Math.round(RATE_CASH * 1000)}`, sub: '/ ¥1,000', color: 'var(--pp-gold)' },
+                { label: '現金/Cash', val: `¥${RATE_CASH_PER_1000}`, sub: '/ ¥1,000', color: 'var(--pp-gold)' },
               ].map(r => (
                 <div key={r.label} style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: 11, color: 'var(--pp-text-3)', marginBottom: 4 }}>{r.label}</div>

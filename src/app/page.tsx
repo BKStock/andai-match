@@ -3,9 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import Nav from '@/components/Nav'
-import { RATE_USDT, RATE_CASH, FEE_PCT } from '@/lib/rates'
+import { RATE_USDT, RATE_CASH_PER_1000, FEE_PCT } from '@/lib/rates'
 
-const RATE_CASH_DISPLAY = Math.round(RATE_CASH * 1000).toString()
 const FEE = FEE_PCT.toString()
 
 export default function LPPage() {
@@ -124,7 +123,7 @@ export default function LPPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {[
                 { label_jp: 'USDT (TRC20)', label_en: 'USDT (TRC20)', val: `¥1,000 → ${RATE_USDT} USDT`, color: 'var(--pp-green)', sub_jp: 'テザー送金', sub_en: 'Tether Transfer' },
-                { label_jp: '現金振込', label_en: 'Cash Transfer', val: `¥1,000 → ¥${RATE_CASH_DISPLAY}`, color: 'var(--pp-gold)', sub_jp: '銀行振込', sub_en: 'Bank Transfer' },
+                { label_jp: '現金振込', label_en: 'Cash Transfer', val: `¥1,000 → ¥${RATE_CASH_PER_1000}`, color: 'var(--pp-gold)', sub_jp: '銀行振込', sub_en: 'Bank Transfer' },
               ].map(r => (
                 <div key={r.label_jp} style={{
                   background: 'var(--pp-elevated)', border: '1px solid var(--pp-border)',
