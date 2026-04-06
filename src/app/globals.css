@@ -190,6 +190,9 @@
   .anim.visible { animation: none; }
   .live-dot { animation: none; }
   .spinner { animation: none; }
+  .pp-btn:hover,
+  .pp-btn-ghost:hover,
+  .pp-action:hover { transform: none; }
 }
 
 .live-dot {
