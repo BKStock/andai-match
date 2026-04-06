@@ -504,7 +504,8 @@
 .pp-nav-pill:focus-visible,
 .pp-amount-btn:focus-visible,
 .pp-action:focus-visible,
-.copy-btn:focus-visible {
+.copy-btn:focus-visible,
+a:focus-visible {
   outline: 2px solid var(--pp-red);
   outline-offset: 2px;
 }
