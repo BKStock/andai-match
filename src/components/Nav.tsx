@@ -55,7 +55,7 @@ export default function Nav() {
             cursor: 'pointer', fontSize: 15, transition: 'border-color 0.2s',
           }}
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+          <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
         </button>
         <Link href="/register" className="pp-btn" style={{ width: 'auto', padding: '8px 16px', fontSize: 13 }}>
           <span className="jp-text">無料で始める</span>
