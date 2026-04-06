@@ -97,7 +97,7 @@ export default function LPPage() {
               { icon: '✅', jp: '本人確認済', en: 'KYC Verified' },
             ].map(b => (
               <span key={b.jp} className="pp-trust">
-                <span>{b.icon}</span>
+                <span aria-hidden="true">{b.icon}</span>
                 <span className="jp-text">{b.jp}</span>
                 <span className="en-text">{b.en}</span>
               </span>
@@ -211,7 +211,7 @@ export default function LPPage() {
               { icon: '💱', tj: '低手数料', te: 'Low Fees', dj: `業界最安 ${FEE}%`, de: `Industry low ${FEE}%` },
             ].map(f => (
               <div key={f.tj} className="pp-card anim d1" style={{ padding: '18px 16px' }}>
-                <div style={{ fontSize: 22, marginBottom: 10 }}>{f.icon}</div>
+                <div aria-hidden="true" style={{ fontSize: 22, marginBottom: 10 }}>{f.icon}</div>
                 <div style={{ fontWeight: 700, marginBottom: 4, fontSize: 14 }}>
                   <span className="jp-text">{f.tj}</span>
                   <span className="en-text">{f.te}</span>
