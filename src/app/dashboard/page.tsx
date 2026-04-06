@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Nav from '@/components/Nav'
-import { useApp } from '@/context/AppContext'
 
 const MOCK_BALANCE = 12_450
 const MOCK_USDT = '80.25'
@@ -65,8 +64,6 @@ const MOCK_TX: Array<{
 ]
 
 export default function DashboardPage() {
-  const { } = useApp()
-
   return (
     <div className="pp-body" style={{ minHeight: '100vh' }}>
       <Nav />
