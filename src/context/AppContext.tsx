@@ -36,6 +36,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-lang', lang)
+    document.documentElement.lang = lang
     localStorage.setItem('pp-lang', lang)
   }, [lang])
 
