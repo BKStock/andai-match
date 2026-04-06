@@ -196,6 +196,14 @@ export default function DepositPage() {
                 <span className="en-text">PayPay ID</span>
               </div>
               <div className="mono-val" style={{ fontSize: 18, marginBottom: 12 }}>{PAYPAY_ID}</div>
+              <div aria-live="polite" aria-atomic="true" className="sr-only">
+                {copied && (
+                  <>
+                    <span className="jp-text">PayPay IDをクリップボードにコピーしました</span>
+                    <span className="en-text">PayPay ID copied to clipboard</span>
+                  </>
+                )}
+              </div>
               <button type="button" className="copy-btn" onClick={handleCopy} style={{ margin: '0 auto' }}>
                 {copied ? (
                   <><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
