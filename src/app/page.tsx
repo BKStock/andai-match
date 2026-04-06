@@ -108,10 +108,10 @@ export default function LPPage() {
         <div className="pp-container">
           <div className="pp-card anim" style={{ padding: 20 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-              <span className="pp-label" style={{ marginBottom: 0 }}>
+              <h2 className="pp-label" style={{ marginBottom: 0 }}>
                 <span className="jp-text">現在のレート</span>
                 <span className="en-text">Current Rates</span>
-              </span>
+              </h2>
               <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--pp-green)' }}>
                 <span aria-hidden="true" className="live-dot" />
                 <span className="jp-text">リアルタイム</span>
