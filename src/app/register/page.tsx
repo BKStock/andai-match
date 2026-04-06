@@ -116,7 +116,7 @@ export default function RegisterPage() {
                 display: 'flex', alignItems: 'flex-start', gap: 12,
                 cursor: 'pointer', marginBottom: 20,
               }}>
-                <div style={{ position: 'relative', flexShrink: 0, marginTop: 1 }}>
+                <div className="pp-checkbox-wrap" style={{ position: 'relative', flexShrink: 0, marginTop: 1 }}>
                   <input
                     type="checkbox"
                     checked={agreed}
@@ -125,6 +125,7 @@ export default function RegisterPage() {
                   />
                   <div
                     aria-hidden="true"
+                    className="pp-checkbox-visual"
                     style={{
                       width: 20, height: 20, borderRadius: 6,
                       border: `2px solid ${agreed ? 'var(--pp-red)' : 'var(--pp-border-strong)'}`,

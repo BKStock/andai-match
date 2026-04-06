@@ -449,6 +449,13 @@
   color: var(--pp-red);
 }
 
+/* Custom checkbox focus indicator */
+.pp-checkbox-wrap input[type="checkbox"]:focus-visible ~ .pp-checkbox-visual {
+  outline: 2px solid var(--pp-red);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 /* Focus-visible styles for keyboard navigation (WCAG 2.4.7) */
 .pp-btn:focus-visible,
 .pp-btn-ghost:focus-visible,
