@@ -30,6 +30,7 @@ export default function LPPage() {
     <div ref={ref} className="pp-body">
       <Nav />
 
+      <main>
       {/* Hero */}
       <section style={{
         paddingTop: 120, paddingBottom: 60, padding: '120px 20px 60px',
@@ -246,6 +247,7 @@ export default function LPPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <footer style={{
         padding: '24px 20px', borderTop: '1px solid var(--pp-border)',

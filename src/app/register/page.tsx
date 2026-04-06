@@ -45,7 +45,7 @@ export default function RegisterPage() {
     <div className="pp-body" style={{ minHeight: '100vh' }}>
       <Nav />
 
-      <div style={{
+      <main style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '80px 20px 40px',
         background: [
@@ -190,7 +190,7 @@ export default function RegisterPage() {
             </Link>
           </p>
         </div>
-      </div>
+      </main>
     </div>
   )
 }
