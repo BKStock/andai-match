@@ -25,6 +25,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <noscript>
+          <div style={{ padding: '20px', textAlign: 'center', fontFamily: 'sans-serif' }}>
+            このサービスにはJavaScriptが必要です。有効にしてください。<br />
+            This service requires JavaScript. Please enable it.
+          </div>
+        </noscript>
         <a href="#main-content" className="skip-link">
           <span className="jp-text">メインコンテンツへスキップ</span>
           <span className="en-text">Skip to main content</span>
