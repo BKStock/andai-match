@@ -10,6 +10,7 @@ const AMOUNTS = [1000, 3000, 5000, 10000, 30000]
 const PAYPAY_ID = '@paypay-match-jp'
 const RATE_USDT = 6.45   // USDT per 1000 yen
 const RATE_CASH = 0.62   // cash payout ratio (62% of deposited yen)
+const QR_FILLED_CELLS = new Set([0,1,2,7,8,14,16,17,18,19,20,21,22,24,28,29,30,31,32,33,34,36,42,43,44,45,46,47,48])
 
 export default function DepositPage() {
   const [step, setStep] = useState<Step>('select')
@@ -175,8 +176,7 @@ export default function DepositPage() {
                   {Array.from({ length: 49 }, (_, i) => (
                     <div key={i} style={{
                       width: 14, height: 14, borderRadius: 2,
-                      background: [0,1,2,7,8,14,16,17,18,19,20,21,22,24,28,29,30,31,32,33,34,36,42,43,44,45,46,47,48].includes(i)
-                        ? 'var(--pp-text)' : 'transparent',
+                      background: QR_FILLED_CELLS.has(i) ? 'var(--pp-text)' : 'transparent',
                     }} />
                   ))}
                 </div>
