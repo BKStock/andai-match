@@ -160,7 +160,7 @@ export default function DepositPage() {
 
             {/* Amount reminder */}
             <div style={{
-              background: 'rgba(229,57,53,0.08)', border: '1px solid rgba(229,57,53,0.2)',
+              background: 'var(--pp-red-08)', border: '1px solid var(--pp-red-20)',
               borderRadius: 14, padding: '12px 16px', marginBottom: 24,
               display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             }}>
@@ -271,7 +271,7 @@ export default function DepositPage() {
             </button>
             <div aria-hidden="true" style={{
               width: 80, height: 80, borderRadius: '50%',
-              background: 'rgba(229,57,53,0.1)', border: '1px solid rgba(229,57,53,0.2)',
+              background: 'var(--pp-red-10)', border: '1px solid var(--pp-red-20)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               margin: '0 auto 24px',
             }}>

@@ -54,7 +54,7 @@ export default function RegisterPage() {
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         padding: '80px 20px 40px',
         background: [
-          'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(229,57,53,0.1) 0%, transparent 60%)',
+          'radial-gradient(ellipse 80% 60% at 50% 0%, var(--pp-red-10) 0%, transparent 60%)',
           'var(--pp-bg)',
         ].join(', '),
       }}>
@@ -170,7 +170,7 @@ export default function RegisterPage() {
                   id="register-error"
                   role="alert"
                   style={{
-                    background: 'rgba(229,57,53,0.08)', border: '1px solid rgba(229,57,53,0.2)',
+                    background: 'var(--pp-red-08)', border: '1px solid var(--pp-red-20)',
                     borderRadius: 10, padding: '10px 14px', marginBottom: 16,
                     fontSize: 13, color: 'var(--pp-red)',
                   }}

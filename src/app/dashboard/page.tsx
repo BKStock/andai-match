@@ -54,7 +54,7 @@ const QUICK_ACTIONS = [
 type TxType = 'deposit' | 'usdt' | 'cash'
 
 const TX_STYLE: Record<TxType, { bg: string; color: string; icon: string; amountColor: string }> = {
-  deposit: { bg: 'rgba(229,57,53,0.1)', color: 'var(--pp-red)',   icon: '⬆', amountColor: 'var(--pp-text)' },
+  deposit: { bg: 'var(--pp-red-10)', color: 'var(--pp-red)',   icon: '⬆', amountColor: 'var(--pp-text)' },
   usdt:    { bg: 'rgba(0,229,160,0.1)', color: 'var(--pp-green)', icon: '◎', amountColor: 'var(--pp-green)' },
   cash:    { bg: 'rgba(255,179,0,0.1)', color: 'var(--pp-gold)',  icon: '¥', amountColor: 'var(--pp-text)' },
 }
@@ -86,7 +86,7 @@ export default function DashboardPage() {
         <section style={{
           padding: '32px 20px 24px',
           background: [
-            'radial-gradient(ellipse 100% 70% at 50% 0%, rgba(229,57,53,0.12) 0%, transparent 60%)',
+            'radial-gradient(ellipse 100% 70% at 50% 0%, var(--pp-red-12) 0%, transparent 60%)',
             'var(--pp-bg)',
           ].join(', '),
         }}>
