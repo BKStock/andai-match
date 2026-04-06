@@ -11,7 +11,7 @@ export default function Nav() {
   const isAuthenticated = pathname === '/dashboard' || (pathname ?? '').startsWith('/deposit')
 
   return (
-    <nav style={{
+    <nav aria-label={lang === 'ja' ? 'メインナビゲーション' : 'Main navigation'} style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300,
       padding: '0 20px', height: '60px',
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
