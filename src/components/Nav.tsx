@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useApp } from '@/context/AppContext'
 
 export default function Nav() {
-  const { theme, lang, toggleTheme, toggleLang } = useApp()
+  const { theme, toggleTheme, toggleLang } = useApp()
 
   return (
     <nav style={{
