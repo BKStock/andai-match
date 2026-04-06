@@ -21,6 +21,10 @@ export default function RegisterPage() {
       setError('メールとパスワードを入力してください。')
       return
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError('有効なメールアドレスを入力してください。')
+      return
+    }
     if (password.length < 8) {
       setError('パスワードは8文字以上必要です。')
       return
