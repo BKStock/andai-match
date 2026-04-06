@@ -35,10 +35,15 @@ export default function RegisterPage() {
     }
 
     setLoading(true)
-    // Simulate registration
-    await new Promise(r => setTimeout(r, 1200))
-    setLoading(false)
-    router.push('/dashboard')
+    try {
+      // Simulate registration
+      await new Promise(r => setTimeout(r, 1200))
+      router.push('/dashboard')
+    } catch {
+      setError('登録に失敗しました。もう一度お試しください。')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -86,6 +91,7 @@ export default function RegisterPage() {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   autoComplete="email"
+                  aria-describedby={error ? 'register-error' : undefined}
                   required
                 />
               </div>
@@ -107,6 +113,7 @@ export default function RegisterPage() {
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                   autoComplete="new-password"
+                  aria-describedby={error ? 'register-error' : undefined}
                   required
                 />
               </div>
@@ -156,6 +163,7 @@ export default function RegisterPage() {
               {/* Error */}
               {error && (
                 <div
+                  id="register-error"
                   role="alert"
                   style={{
                     background: 'rgba(229,57,53,0.08)', border: '1px solid rgba(229,57,53,0.2)',

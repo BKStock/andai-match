@@ -22,11 +22,13 @@ const AppContext = createContext<AppContextType>({
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === 'undefined') return 'dark'
-    return (localStorage.getItem('pp-theme') as Theme) || 'dark'
+    const saved = localStorage.getItem('pp-theme')
+    return saved === 'light' || saved === 'dark' ? saved : 'dark'
   })
   const [lang, setLang] = useState<Lang>(() => {
     if (typeof window === 'undefined') return 'ja'
-    return (localStorage.getItem('pp-lang') as Lang) || 'ja'
+    const saved = localStorage.getItem('pp-lang')
+    return saved === 'en' || saved === 'ja' ? saved : 'ja'
   })
 
   useEffect(() => {
