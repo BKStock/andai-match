@@ -448,3 +448,14 @@
   border-color: rgba(229,57,53,0.4);
   color: var(--pp-red);
 }
+
+/* Focus-visible styles for keyboard navigation (WCAG 2.4.7) */
+.pp-btn:focus-visible,
+.pp-btn-ghost:focus-visible,
+.pp-nav-pill:focus-visible,
+.pp-amount-btn:focus-visible,
+.pp-action:focus-visible,
+.copy-btn:focus-visible {
+  outline: 2px solid var(--pp-red);
+  outline-offset: 2px;
+}
