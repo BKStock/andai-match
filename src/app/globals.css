@@ -263,6 +263,7 @@
   box-shadow: var(--pp-shadow-red-hover);
 }
 .pp-btn:active { transform: translateY(0); }
+.pp-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
 
 .pp-btn-ghost {
   background: transparent;

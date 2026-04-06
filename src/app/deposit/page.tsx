@@ -117,7 +117,6 @@ export default function DepositPage() {
               className="pp-btn"
               disabled={!selectedAmount}
               onClick={() => setStep('qr')}
-              style={{ opacity: selectedAmount ? 1 : 0.4, cursor: selectedAmount ? 'pointer' : 'not-allowed' }}
             >
               <span className="jp-text">次へ → 送金先を確認</span>
               <span className="en-text">Next → View Payment Details</span>
