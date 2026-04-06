@@ -207,13 +207,13 @@ export default function DepositPage() {
               <span className="en-text">
                 ① Open PayPay app → Send<br />
                 ② Search the ID above → Enter amount<br />
-                ③ Pay with MoneyLight → Tap "I've sent it"
+                ③ Pay with MoneyLight → Tap &quot;I&apos;ve sent it&quot;
               </span>
             </div>
 
             <button className="pp-btn" onClick={handleConfirmSent}>
               <span className="jp-text">送金完了した →</span>
-              <span className="en-text">I've Sent It →</span>
+              <span className="en-text">I&apos;ve Sent It →</span>
             </button>
           </div>
         </main>
@@ -250,7 +250,7 @@ export default function DepositPage() {
                 通常1〜5分で完了します。このまましばらくお待ちください。
               </span>
               <span className="en-text">
-                We're confirming your PayPay payment.<br />
+                We&apos;re confirming your PayPay payment.<br />
                 This usually takes 1–5 minutes. Please wait.
               </span>
             </p>
