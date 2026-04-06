@@ -138,7 +138,7 @@ export default function RegisterPage() {
                       border: `2px solid ${agreed ? 'var(--pp-red)' : 'var(--pp-border-strong)'}`,
                       background: agreed ? 'var(--pp-red)' : 'transparent',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      transition: 'all 0.15s', pointerEvents: 'none',
+                      transition: 'border-color 0.15s, background 0.15s', pointerEvents: 'none',
                     }}
                   >
                     {agreed && (
