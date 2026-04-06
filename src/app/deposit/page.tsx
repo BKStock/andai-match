@@ -81,6 +81,7 @@ export default function DepositPage() {
                   type="button"
                   className={`pp-amount-btn${selectedAmount === a ? ' active' : ''}`}
                   onClick={() => setSelectedAmount(a)}
+                  aria-pressed={selectedAmount === a}
                   style={AMOUNTS.length % 2 !== 0 && i === AMOUNTS.length - 1 ? { gridColumn: 'span 2' } : undefined}
                 >
                   ¥{a.toLocaleString()}
