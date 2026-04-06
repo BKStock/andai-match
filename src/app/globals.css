@@ -191,6 +191,13 @@
 .anim.visible.d3 { animation-delay: 0.3s; }
 .anim.visible.d4 { animation-delay: 0.4s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .anim { opacity: 1; }
+  .anim.visible { animation: none; }
+  .live-dot { animation: none; }
+  .spinner { animation: none; }
+}
+
 .live-dot {
   display: inline-block;
   width: 7px;
