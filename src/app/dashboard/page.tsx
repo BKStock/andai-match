@@ -78,6 +78,10 @@ export default function DashboardPage() {
       <Nav />
 
       <main style={{ paddingTop: 76, paddingBottom: 48 }}>
+        <h1 className="sr-only">
+          <span className="jp-text">ダッシュボード</span>
+          <span className="en-text">Dashboard</span>
+        </h1>
         {/* Balance section */}
         <section style={{
           padding: '32px 20px 24px',
