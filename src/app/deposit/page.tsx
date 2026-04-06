@@ -256,6 +256,19 @@ export default function DepositPage() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh',
         }}>
           <div style={{ maxWidth: 400, textAlign: 'center', width: '100%' }}>
+            <button
+              type="button"
+              onClick={() => setStep('qr')}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 6,
+                color: 'var(--pp-text-2)', fontSize: 14, background: 'none', border: 'none',
+                cursor: 'pointer', marginBottom: 32,
+              }}
+            >
+              <span aria-hidden="true">←</span>{' '}
+              <span className="jp-text">送金先へ戻る</span>
+              <span className="en-text">Back to Payment</span>
+            </button>
             <div aria-hidden="true" style={{
               width: 80, height: 80, borderRadius: '50%',
               background: 'rgba(229,57,53,0.1)', border: '1px solid rgba(229,57,53,0.2)',
