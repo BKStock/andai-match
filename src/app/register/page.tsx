@@ -93,6 +93,7 @@ export default function RegisterPage() {
                   autoComplete="email"
                   aria-describedby={error ? 'register-error' : undefined}
                   aria-invalid={error ? true : undefined}
+                  inputMode="email"
                   required
                 />
               </div>
@@ -116,6 +117,7 @@ export default function RegisterPage() {
                   autoComplete="new-password"
                   aria-describedby={error ? 'register-error' : undefined}
                   aria-invalid={error ? true : undefined}
+                  minLength={8}
                   required
                 />
               </div>
