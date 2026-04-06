@@ -374,8 +374,7 @@
   transition: color 0.2s, border-color 0.2s;
   letter-spacing: 0.02em;
 }
-.pp-nav-pill:hover,
-.pp-nav-pill.active {
+.pp-nav-pill:hover {
   color: var(--pp-red);
   border-color: var(--pp-red);
 }
