@@ -50,8 +50,16 @@ const QUICK_ACTIONS = [
   },
 ]
 
+type TxType = 'deposit' | 'usdt' | 'cash'
+
+const TX_STYLE: Record<TxType, { bg: string; color: string; icon: string }> = {
+  deposit: { bg: 'rgba(229,57,53,0.1)', color: 'var(--pp-red)', icon: '⬆' },
+  usdt:    { bg: 'rgba(0,229,160,0.1)', color: 'var(--pp-green)', icon: '◎' },
+  cash:    { bg: 'rgba(255,179,0,0.1)', color: 'var(--pp-gold)', icon: '¥' },
+}
+
 const MOCK_TX: Array<{
-  type: 'deposit' | 'usdt' | 'cash'
+  type: TxType
   label_jp: string
   label_en: string
   amount: string
@@ -179,11 +187,11 @@ export default function DashboardPage() {
                     {/* Icon */}
                     <div style={{
                       width: 38, height: 38, borderRadius: 12, flexShrink: 0,
-                      background: tx.type === 'deposit' ? 'rgba(229,57,53,0.1)' : tx.type === 'usdt' ? 'rgba(0,229,160,0.1)' : 'rgba(255,179,0,0.1)',
+                      background: TX_STYLE[tx.type].bg,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: tx.type === 'deposit' ? 'var(--pp-red)' : tx.type === 'usdt' ? 'var(--pp-green)' : 'var(--pp-gold)',
+                      color: TX_STYLE[tx.type].color,
                     }}>
-                      {tx.type === 'deposit' ? '⬆' : tx.type === 'usdt' ? '◎' : '¥'}
+                      {TX_STYLE[tx.type].icon}
                     </div>
 
                     {/* Label */}
@@ -199,7 +207,7 @@ export default function DashboardPage() {
                     <div style={{ textAlign: 'right' }}>
                       <div className="mono-val" style={{
                         fontSize: 14, marginBottom: 2,
-                        color: tx.type === 'usdt' ? 'var(--pp-green)' : 'var(--pp-text)',
+                        color: tx.type === 'usdt' ? TX_STYLE.usdt.color : 'var(--pp-text)',
                       }}>
                         {tx.amount}
                       </div>
