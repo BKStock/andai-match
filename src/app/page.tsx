@@ -33,7 +33,7 @@ export default function LPPage() {
       <main>
       {/* Hero */}
       <section style={{
-        paddingTop: 120, paddingBottom: 60, padding: '120px 20px 60px',
+        padding: '120px 20px 60px',
         position: 'relative', overflow: 'hidden',
         background: [
           'radial-gradient(ellipse 120% 80% at 50% -10%, rgba(229,57,53,0.18) 0%, transparent 60%)',
