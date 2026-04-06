@@ -300,6 +300,9 @@
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+.pp-input:hover {
+  border-color: var(--pp-border-strong);
+}
 .pp-input:focus {
   border-color: var(--pp-red);
   box-shadow: 0 0 0 2px rgba(229,57,53,0.15);
