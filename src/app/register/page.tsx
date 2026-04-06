@@ -154,12 +154,12 @@ export default function RegisterPage() {
                 </div>
                 <span style={{ fontSize: 13, color: 'var(--pp-text-2)', lineHeight: 1.5 }}>
                   <span className="jp-text">
-                    <a href="/terms" style={{ color: 'var(--pp-red)' }}>利用規約</a>と
-                    <a href="/privacy" style={{ color: 'var(--pp-red)' }}>プライバシーポリシー</a>に同意します
+                    <Link href="/terms" style={{ color: 'var(--pp-red)' }}>利用規約</Link>と
+                    <Link href="/privacy" style={{ color: 'var(--pp-red)' }}>プライバシーポリシー</Link>に同意します
                   </span>
                   <span className="en-text">
-                    I agree to the <a href="/terms" style={{ color: 'var(--pp-red)' }}>Terms of Service</a> and{' '}
-                    <a href="/privacy" style={{ color: 'var(--pp-red)' }}>Privacy Policy</a>
+                    I agree to the <Link href="/terms" style={{ color: 'var(--pp-red)' }}>Terms of Service</Link> and{' '}
+                    <Link href="/privacy" style={{ color: 'var(--pp-red)' }}>Privacy Policy</Link>
                   </span>
                 </span>
               </label>
