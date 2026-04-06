@@ -52,10 +52,10 @@ const QUICK_ACTIONS = [
 
 type TxType = 'deposit' | 'usdt' | 'cash'
 
-const TX_STYLE: Record<TxType, { bg: string; color: string; icon: string }> = {
-  deposit: { bg: 'rgba(229,57,53,0.1)', color: 'var(--pp-red)', icon: '⬆' },
-  usdt:    { bg: 'rgba(0,229,160,0.1)', color: 'var(--pp-green)', icon: '◎' },
-  cash:    { bg: 'rgba(255,179,0,0.1)', color: 'var(--pp-gold)', icon: '¥' },
+const TX_STYLE: Record<TxType, { bg: string; color: string; icon: string; amountColor: string }> = {
+  deposit: { bg: 'rgba(229,57,53,0.1)', color: 'var(--pp-red)',   icon: '⬆', amountColor: 'var(--pp-text)' },
+  usdt:    { bg: 'rgba(0,229,160,0.1)', color: 'var(--pp-green)', icon: '◎', amountColor: 'var(--pp-green)' },
+  cash:    { bg: 'rgba(255,179,0,0.1)', color: 'var(--pp-gold)',  icon: '¥', amountColor: 'var(--pp-text)' },
 }
 
 const MOCK_TX: Array<{
@@ -207,7 +207,7 @@ export default function DashboardPage() {
                     <div style={{ textAlign: 'right' }}>
                       <div className="mono-val" style={{
                         fontSize: 14, marginBottom: 2,
-                        color: tx.type === 'usdt' ? TX_STYLE.usdt.color : 'var(--pp-text)',
+                        color: TX_STYLE[tx.type].amountColor,
                       }}>
                         {tx.amount}
                       </div>
