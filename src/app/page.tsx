@@ -5,8 +5,6 @@ import { useEffect, useRef } from 'react'
 import Nav from '@/components/Nav'
 import { RATE_USDT, RATE_CASH_PER_1000, FEE_PCT } from '@/lib/rates'
 
-const FEE = FEE_PCT.toString()
-
 export default function LPPage() {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -145,8 +143,8 @@ export default function LPPage() {
               ))}
             </div>
             <div style={{ marginTop: 12, textAlign: 'center', fontSize: 11, color: 'var(--pp-text-3)' }}>
-              <span className="jp-text">手数料 {FEE}% 込み · 最小 ¥1,000</span>
-              <span className="en-text">{FEE}% fee included · Min ¥1,000</span>
+              <span className="jp-text">手数料 {FEE_PCT}% 込み · 最小 ¥1,000</span>
+              <span className="en-text">{FEE_PCT}% fee included · Min ¥1,000</span>
             </div>
           </div>
         </div>
@@ -207,7 +205,7 @@ export default function LPPage() {
               { icon: '🇯🇵', tj: '日本唯一', te: 'Japan Exclusive', dj: 'マネーライト換金対応', de: 'MoneyLight exchange' },
               { icon: '⚡', tj: '即時処理', te: 'Instant', dj: '最短5分で着金', de: 'Arrives in 5 min' },
               { icon: '🔒', tj: '安全・匿名', te: 'Secure & Private', dj: 'SSL + 本人確認', de: 'SSL + KYC verified' },
-              { icon: '💱', tj: '低手数料', te: 'Low Fees', dj: `業界最安 ${FEE}%`, de: `Industry low ${FEE}%` },
+              { icon: '💱', tj: '低手数料', te: 'Low Fees', dj: `業界最安 ${FEE_PCT}%`, de: `Industry low ${FEE_PCT}%` },
             ].map(f => (
               <div key={f.tj} className="pp-card anim d1" style={{ padding: '18px 16px' }}>
                 <div aria-hidden="true" style={{ fontSize: 22, marginBottom: 10 }}>{f.icon}</div>
