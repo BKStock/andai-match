@@ -115,7 +115,7 @@ export default function DashboardPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
               {QUICK_ACTIONS.map(a => (
                 <Link key={a.label_jp} href={a.href} className="pp-action">
-                  <div style={{ color: a.color }}>{a.icon}</div>
+                  <div aria-hidden="true" style={{ color: a.color }}>{a.icon}</div>
                   <div style={{ fontSize: 12, fontWeight: 700, textAlign: 'center', lineHeight: 1.3 }}>
                     <span className="jp-text">{a.label_jp}</span>
                     <span className="en-text">{a.label_en}</span>
