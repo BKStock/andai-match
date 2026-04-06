@@ -182,8 +182,8 @@ export default function DashboardPage() {
               </div>
             ) : (
               <div className="pp-card" style={{ overflow: 'hidden' }}>
-                {MOCK_TX.map((tx, i) => (
-                  <div key={i} className="tx-row" style={{ padding: '14px 16px' }}>
+                {MOCK_TX.map((tx) => (
+                  <div key={`${tx.date}-${tx.type}`} className="tx-row" style={{ padding: '14px 16px' }}>
                     {/* Icon */}
                     <div style={{
                       width: 38, height: 38, borderRadius: 12, flexShrink: 0,
