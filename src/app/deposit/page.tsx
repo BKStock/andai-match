@@ -8,7 +8,8 @@ type Step = 'select' | 'qr' | 'waiting' | 'success'
 
 const AMOUNTS = [1000, 3000, 5000, 10000, 30000]
 const PAYPAY_ID = '@paypay-match-jp'
-const RATE_USDT = 6.45
+const RATE_USDT = 6.45   // USDT per 1000 yen
+const RATE_CASH = 0.62   // cash payout ratio (62% of deposited yen)
 
 export default function DepositPage() {
   const [step, setStep] = useState<Step>('select')
@@ -32,7 +33,7 @@ export default function DepositPage() {
   }
 
   const estimatedUsdt = selectedAmount ? ((selectedAmount / 1000) * RATE_USDT).toFixed(2) : '0.00'
-  const estimatedCash = selectedAmount ? Math.floor(selectedAmount * 0.62).toLocaleString() : '0'
+  const estimatedCash = selectedAmount ? Math.floor(selectedAmount * RATE_CASH).toLocaleString() : '0'
 
   // Step: Select amount
   if (step === 'select') {
