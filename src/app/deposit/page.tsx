@@ -244,7 +244,7 @@ export default function DepositPage() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh',
         }}>
           <div style={{ maxWidth: 400, textAlign: 'center', width: '100%' }}>
-            <div style={{
+            <div aria-hidden="true" style={{
               width: 80, height: 80, borderRadius: '50%',
               background: 'rgba(229,57,53,0.1)', border: '1px solid rgba(229,57,53,0.2)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',

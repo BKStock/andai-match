@@ -170,7 +170,7 @@ export default function RegisterPage() {
               <button type="submit" className="pp-btn" disabled={loading}>
                 {loading ? (
                   <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <span className="spinner" style={{ width: 18, height: 18 }} />
+                    <span aria-hidden="true" className="spinner" style={{ width: 18, height: 18 }} />
                     <span className="jp-text">登録中...</span>
                     <span className="en-text">Registering...</span>
                   </span>
