@@ -77,7 +77,7 @@ export default function DashboardPage() {
     <div className="pp-body" style={{ minHeight: '100vh' }}>
       <Nav />
 
-      <main style={{ paddingTop: 76, paddingBottom: 48 }}>
+      <main id="main-content" style={{ paddingTop: 76, paddingBottom: 48 }}>
         <h1 className="sr-only">
           <span className="jp-text">ダッシュボード</span>
           <span className="en-text">Dashboard</span>

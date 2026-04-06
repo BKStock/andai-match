@@ -449,6 +449,32 @@
   color: var(--pp-red);
 }
 
+/* Skip navigation link (WCAG 2.4.1) */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: auto;
+  height: auto;
+  padding: 12px 20px;
+  background: var(--pp-bg);
+  color: var(--pp-text);
+  border: 2px solid var(--pp-red);
+  border-radius: 8px;
+  z-index: 9999;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* Screen reader only utility */
 .sr-only {
   position: absolute;

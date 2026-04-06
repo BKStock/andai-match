@@ -48,7 +48,7 @@ export default function DepositPage() {
     return (
       <div className="pp-body" style={{ minHeight: '100vh' }}>
         <Nav />
-        <main style={{ padding: '80px 20px 48px' }}>
+        <main id="main-content" style={{ padding: '80px 20px 48px' }}>
           <div className="pp-container">
             {/* Back */}
             <Link href="/dashboard" style={{
@@ -133,7 +133,7 @@ export default function DepositPage() {
     return (
       <div className="pp-body" style={{ minHeight: '100vh' }}>
         <Nav />
-        <main style={{ padding: '80px 20px 48px' }}>
+        <main id="main-content" style={{ padding: '80px 20px 48px' }}>
           <div className="pp-container">
             <button
               type="button"
@@ -243,7 +243,7 @@ export default function DepositPage() {
     return (
       <div className="pp-body" style={{ minHeight: '100vh' }}>
         <Nav />
-        <main style={{
+        <main id="main-content" style={{
           padding: '80px 20px 48px',
           display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh',
         }}>
@@ -313,7 +313,7 @@ export default function DepositPage() {
   return (
     <div className="pp-body" style={{ minHeight: '100vh' }}>
       <Nav />
-      <main style={{
+      <main id="main-content" style={{
         padding: '80px 20px 48px',
         display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh',
       }}>
