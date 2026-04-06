@@ -114,21 +114,29 @@ export default function RegisterPage() {
                 display: 'flex', alignItems: 'flex-start', gap: 12,
                 cursor: 'pointer', marginBottom: 20,
               }}>
-                <div
-                  onClick={() => setAgreed(!agreed)}
-                  style={{
-                    width: 20, height: 20, borderRadius: 6, flexShrink: 0, marginTop: 1,
-                    border: `2px solid ${agreed ? 'var(--pp-red)' : 'var(--pp-border-strong)'}`,
-                    background: agreed ? 'var(--pp-red)' : 'transparent',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    transition: 'all 0.15s', cursor: 'pointer',
-                  }}
-                >
-                  {agreed && (
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                      <path d="M1 4l3 3 5-6" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  )}
+                <div style={{ position: 'relative', flexShrink: 0, marginTop: 1 }}>
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={e => setAgreed(e.target.checked)}
+                    style={{ position: 'absolute', opacity: 0, width: 20, height: 20, cursor: 'pointer', margin: 0 }}
+                  />
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      width: 20, height: 20, borderRadius: 6,
+                      border: `2px solid ${agreed ? 'var(--pp-red)' : 'var(--pp-border-strong)'}`,
+                      background: agreed ? 'var(--pp-red)' : 'transparent',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      transition: 'all 0.15s', pointerEvents: 'none',
+                    }}
+                  >
+                    {agreed && (
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                        <path d="M1 4l3 3 5-6" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
+                  </div>
                 </div>
                 <span style={{ fontSize: 13, color: 'var(--pp-text-2)', lineHeight: 1.5 }}>
                   <span className="jp-text">
