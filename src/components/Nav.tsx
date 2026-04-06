@@ -1,10 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useApp } from '@/context/AppContext'
 
 export default function Nav() {
   const { theme, lang, toggleTheme, toggleLang } = useApp()
+  const pathname = usePathname()
+  const isRegister = pathname === '/register'
 
   return (
     <nav style={{
@@ -58,10 +61,17 @@ export default function Nav() {
         >
           <span aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
         </button>
-        <Link href="/register" className="pp-btn" style={{ width: 'auto', padding: '8px 16px', fontSize: 13 }}>
-          <span className="jp-text">無料で始める</span>
-          <span className="en-text">Get Started</span>
-        </Link>
+        {isRegister ? (
+          <Link href="/dashboard" className="pp-btn" style={{ width: 'auto', padding: '8px 16px', fontSize: 13 }}>
+            <span className="jp-text">ログイン</span>
+            <span className="en-text">Log In</span>
+          </Link>
+        ) : (
+          <Link href="/register" className="pp-btn" style={{ width: 'auto', padding: '8px 16px', fontSize: 13 }}>
+            <span className="jp-text">無料で始める</span>
+            <span className="en-text">Get Started</span>
+          </Link>
+        )}
       </div>
     </nav>
   )
