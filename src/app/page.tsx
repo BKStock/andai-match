@@ -195,10 +195,10 @@ export default function LPPage() {
       <section style={{ padding: '40px 20px' }}>
         <div className="pp-container">
           <div className="anim" style={{ marginBottom: 24 }}>
-            <span className="pp-label">
+            <h2 className="pp-label">
               <span className="jp-text">特徴</span>
               <span className="en-text">Features</span>
-            </span>
+            </h2>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             {[
