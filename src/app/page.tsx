@@ -12,6 +12,8 @@ export default function LPPage() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const root = ref.current
+    if (!root) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(e => {
@@ -20,7 +22,7 @@ export default function LPPage() {
       },
       { threshold: 0.1 }
     )
-    document.querySelectorAll('.anim').forEach(el => observer.observe(el))
+    root.querySelectorAll('.anim').forEach(el => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
