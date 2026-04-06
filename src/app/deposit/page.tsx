@@ -29,7 +29,6 @@ export default function DepositPage() {
 
   const handleSimulateConfirm = () => {
     setTimeout(() => setStep('success'), 2000)
-    setStep('waiting')
   }
 
   const estimatedUsdt = selectedAmount ? ((selectedAmount / 1000) * RATE_USDT).toFixed(2) : '0.00'
