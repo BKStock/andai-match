@@ -455,6 +455,7 @@
   border-color: rgba(229,57,53,0.4);
   color: var(--pp-red);
 }
+.copy-btn:active { opacity: 0.7; }
 
 /* Skip navigation link (WCAG 2.4.1) */
 .skip-link {
