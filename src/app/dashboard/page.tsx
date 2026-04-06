@@ -113,10 +113,10 @@ export default function DashboardPage() {
         {/* Quick Actions */}
         <section style={{ padding: '0 20px 24px' }}>
           <div className="pp-container">
-            <span className="pp-label" style={{ marginBottom: 14 }}>
+            <h2 className="pp-label" style={{ marginBottom: 14 }}>
               <span className="jp-text">クイックアクション</span>
               <span className="en-text">Quick Actions</span>
-            </span>
+            </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
               {QUICK_ACTIONS.map(a => (
                 <Link key={a.label_jp} href={a.href} className="pp-action">
@@ -167,10 +167,10 @@ export default function DashboardPage() {
         {/* Recent transactions */}
         <section style={{ padding: '0 20px' }}>
           <div className="pp-container">
-            <span className="pp-label" style={{ marginBottom: 14 }}>
+            <h2 className="pp-label" style={{ marginBottom: 14 }}>
               <span className="jp-text">最近の取引</span>
               <span className="en-text">Recent Transactions</span>
-            </span>
+            </h2>
 
             {MOCK_TX.length === 0 ? (
               /* Empty state */
