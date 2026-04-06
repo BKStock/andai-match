@@ -6,9 +6,16 @@ export const metadata: Metadata = {
   title: 'PayPay Match — マネーライトを現金・USDTに',
   description: 'PayPayマネーライトを現金・USDTに換金できる唯一のサービス。安全・即時・低手数料。',
   openGraph: {
+    type: 'website',
+    siteName: 'PayPay Match',
     title: 'PayPay Match',
     description: 'PayPayマネーライトの唯一の換金サービス',
     locale: 'ja_JP',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'PayPay Match — マネーライトを現金・USDTに',
+    description: 'PayPayマネーライトを現金・USDTに換金できる唯一のサービス。',
   },
 }
 
