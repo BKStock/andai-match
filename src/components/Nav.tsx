@@ -13,6 +13,7 @@ export default function Nav() {
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
       background: theme === 'dark' ? 'rgba(6,6,8,0.85)' : 'rgba(242,242,247,0.9)',
       backdropFilter: 'blur(24px)',
+      WebkitBackdropFilter: 'blur(24px)',
       borderBottom: '1px solid var(--pp-border)',
     }}>
       <Link href="/" style={{ textDecoration: 'none' }}>
