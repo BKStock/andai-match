@@ -164,6 +164,9 @@
 [data-lang="en"] .jp-text { display: none !important; }
 [data-lang="ja"] .en-text { display: none !important; }
 
+/* Account for fixed nav when scrolling to anchor targets */
+[id] { scroll-margin-top: 70px; }
+
 /* Scroll animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
