@@ -276,16 +276,18 @@ export default function DepositPage() {
             </div>
 
             {/* Dev: simulate confirm */}
-            <button
-              onClick={handleSimulateConfirm}
-              style={{
-                fontSize: 12, color: 'var(--pp-text-3)', background: 'none',
-                border: '1px solid var(--pp-border)', borderRadius: 8, padding: '8px 16px',
-                cursor: 'pointer',
-              }}
-            >
-              [Demo] Simulate Confirmation
-            </button>
+            {process.env.NODE_ENV === 'development' && (
+              <button
+                onClick={handleSimulateConfirm}
+                style={{
+                  fontSize: 12, color: 'var(--pp-text-3)', background: 'none',
+                  border: '1px solid var(--pp-border)', borderRadius: 8, padding: '8px 16px',
+                  cursor: 'pointer',
+                }}
+              >
+                [Demo] Simulate Confirmation
+              </button>
+            )}
           </div>
         </main>
       </div>
