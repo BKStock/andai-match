@@ -51,7 +51,7 @@ export default function LPPage() {
               borderRadius: 100, padding: '6px 14px',
               fontSize: 12, fontWeight: 700, color: 'var(--pp-green)',
             }}>
-              <span className="live-dot" />
+              <span aria-hidden="true" className="live-dot" />
               <span className="jp-text">レート更新中</span>
               <span className="en-text">Live Rates</span>
             </span>
@@ -116,7 +116,7 @@ export default function LPPage() {
                 <span className="en-text">Current Rates</span>
               </span>
               <span style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--pp-green)' }}>
-                <span className="live-dot" />
+                <span aria-hidden="true" className="live-dot" />
                 <span className="jp-text">リアルタイム</span>
                 <span className="en-text">Real-time</span>
               </span>
