@@ -72,7 +72,7 @@ export default function LPPage() {
             maxWidth: 460, margin: '0 auto 32px',
           }}>
             <span className="jp-text">日本唯一のマネーライト換金サービス。送金→即時変換→出金まで最短5分。</span>
-            <span className="en-text">Japan's only MoneyLight exchange. Send → Convert → Withdraw in as little as 5 minutes.</span>
+            <span className="en-text">Japan&apos;s only MoneyLight exchange. Send → Convert → Withdraw in as little as 5 minutes.</span>
           </p>
 
           <div className="anim d3" style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 32 }}>
