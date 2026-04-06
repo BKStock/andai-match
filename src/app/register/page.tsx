@@ -92,6 +92,7 @@ export default function RegisterPage() {
                   onChange={e => setEmail(e.target.value)}
                   autoComplete="email"
                   aria-describedby={error ? 'register-error' : undefined}
+                  aria-invalid={error ? true : undefined}
                   required
                 />
               </div>
@@ -114,6 +115,7 @@ export default function RegisterPage() {
                   onChange={e => setPassword(e.target.value)}
                   autoComplete="new-password"
                   aria-describedby={error ? 'register-error' : undefined}
+                  aria-invalid={error ? true : undefined}
                   required
                 />
               </div>
