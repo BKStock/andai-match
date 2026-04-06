@@ -14,6 +14,7 @@ export default function LPPage() {
   useEffect(() => {
     const root = ref.current
     if (!root) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(e => {
