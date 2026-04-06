@@ -24,7 +24,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (typeof window === 'undefined') return 'dark'
     return (localStorage.getItem('pp-theme') as Theme) || 'dark'
   })
-  const [lang, setLang] = useState<Lang>('ja')
+  const [lang, setLang] = useState<Lang>(() => {
+    if (typeof window === 'undefined') return 'ja'
+    return (localStorage.getItem('pp-lang') as Lang) || 'ja'
+  })
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -33,6 +36,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-lang', lang)
+    localStorage.setItem('pp-lang', lang)
   }, [lang])
 
   const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark')
