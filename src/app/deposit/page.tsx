@@ -16,9 +16,11 @@ export default function DepositPage() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [copied, setCopied] = useState(false)
   const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const simulateTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => () => {
     if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
+    if (simulateTimerRef.current) clearTimeout(simulateTimerRef.current)
   }, [])
 
   const handleCopy = async () => {
@@ -35,7 +37,7 @@ export default function DepositPage() {
   const handleConfirmSent = () => setStep('waiting')
 
   const handleSimulateConfirm = () => {
-    setTimeout(() => setStep('success'), 2000)
+    simulateTimerRef.current = setTimeout(() => setStep('success'), 2000)
   }
 
   const estimatedUsdt = selectedAmount ? ((selectedAmount / 1000) * RATE_USDT).toFixed(2) : '0.00'
@@ -97,7 +99,7 @@ export default function DepositPage() {
                     <div className="mono-val" style={{ color: 'var(--pp-green)', fontSize: 18 }}>{estimatedUsdt} USDT</div>
                     <div style={{ fontSize: 11, color: 'var(--pp-text-3)' }}>TRC20</div>
                   </div>
-                  <div style={{ color: 'var(--pp-border)', fontSize: 20 }}>|</div>
+                  <div aria-hidden="true" style={{ color: 'var(--pp-border)', fontSize: 20 }}>|</div>
                   <div style={{ textAlign: 'center', flex: 1 }}>
                     <div className="mono-val" style={{ color: 'var(--pp-gold)', fontSize: 18 }}>¥{estimatedCash}</div>
                     <div style={{ fontSize: 11, color: 'var(--pp-text-3)' }}>
@@ -178,7 +180,7 @@ export default function DepositPage() {
                 border: '1px solid var(--pp-border)',
               }}>
                 {/* QR grid placeholder */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', gap: 3, padding: 16 }}>
+                <div aria-hidden="true" style={{ display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', gap: 3, padding: 16 }}>
                   {Array.from({ length: 49 }, (_, i) => (
                     <div key={i} style={{
                       width: 14, height: 14, borderRadius: 2,
