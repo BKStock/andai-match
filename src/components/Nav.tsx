@@ -43,6 +43,7 @@ export default function Nav() {
         </button>
         <button
           onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
           style={{
             width: 36, height: 36, borderRadius: '50%',
             background: 'var(--pp-surface)',
