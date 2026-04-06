@@ -85,7 +85,7 @@ export default function DashboardPage() {
             'var(--pp-bg)',
           ].join(', '),
         }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             <div style={{ marginBottom: 4, fontSize: 13, color: 'var(--pp-text-2)' }}>
               <span className="jp-text">ポイント残高</span>
               <span className="en-text">Point Balance</span>
@@ -107,7 +107,7 @@ export default function DashboardPage() {
 
         {/* Quick Actions */}
         <section style={{ padding: '0 20px 24px' }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             <span className="pp-label" style={{ marginBottom: 14 }}>
               <span className="jp-text">クイックアクション</span>
               <span className="en-text">Quick Actions</span>
@@ -132,7 +132,7 @@ export default function DashboardPage() {
 
         {/* Rate bar */}
         <section style={{ padding: '0 20px 24px' }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             <div className="pp-card" style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-around' }}>
               {[
                 { label: 'USDT', val: '6.45 USDT', sub: '/ ¥1,000', color: 'var(--pp-green)' },
@@ -161,7 +161,7 @@ export default function DashboardPage() {
 
         {/* Recent transactions */}
         <section style={{ padding: '0 20px' }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             <span className="pp-label" style={{ marginBottom: 14 }}>
               <span className="jp-text">最近の取引</span>
               <span className="en-text">Recent Transactions</span>

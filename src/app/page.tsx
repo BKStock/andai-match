@@ -108,7 +108,7 @@ export default function LPPage() {
 
       {/* Rate Card */}
       <section style={{ padding: '0 20px 48px' }}>
-        <div style={{ maxWidth: 480, margin: '0 auto' }}>
+        <div className="pp-container">
           <div className="pp-card anim" style={{ padding: 20 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
               <span className="pp-label" style={{ marginBottom: 0 }}>
@@ -155,7 +155,7 @@ export default function LPPage() {
 
       {/* How it works */}
       <section id="how" style={{ padding: '40px 20px' }}>
-        <div style={{ maxWidth: 480, margin: '0 auto' }}>
+        <div className="pp-container">
           <div className="anim" style={{ marginBottom: 28 }}>
             <span className="pp-label">
               <span className="jp-text">使い方</span>
@@ -196,7 +196,7 @@ export default function LPPage() {
 
       {/* Features grid */}
       <section style={{ padding: '40px 20px' }}>
-        <div style={{ maxWidth: 480, margin: '0 auto' }}>
+        <div className="pp-container">
           <div className="anim" style={{ marginBottom: 24 }}>
             <span className="pp-label">
               <span className="jp-text">特徴</span>
@@ -228,7 +228,7 @@ export default function LPPage() {
 
       {/* CTA */}
       <section style={{ padding: '40px 20px 80px' }}>
-        <div style={{ maxWidth: 480, margin: '0 auto', textAlign: 'center' }}>
+        <div className="pp-container" style={{ textAlign: 'center' }}>
           <div className="pp-card anim" style={{
             padding: '40px 24px',
             background: 'linear-gradient(135deg, rgba(229,57,53,0.06), rgba(0,229,160,0.03))',

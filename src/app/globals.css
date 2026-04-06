@@ -210,6 +210,12 @@
   animation: spin 0.8s linear infinite;
 }
 
+/* Centered content container */
+.pp-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
 /* PayPay Match body override */
 .pp-body {
   background: var(--pp-bg);

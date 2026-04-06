@@ -48,7 +48,7 @@ export default function DepositPage() {
       <div className="pp-body" style={{ minHeight: '100vh' }}>
         <Nav />
         <main style={{ padding: '80px 20px 48px' }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             {/* Back */}
             <Link href="/dashboard" style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -131,7 +131,7 @@ export default function DepositPage() {
       <div className="pp-body" style={{ minHeight: '100vh' }}>
         <Nav />
         <main style={{ padding: '80px 20px 48px' }}>
-          <div style={{ maxWidth: 480, margin: '0 auto' }}>
+          <div className="pp-container">
             <button
               type="button"
               onClick={() => setStep('select')}
