@@ -55,7 +55,8 @@ export default function DepositPage() {
               display: 'inline-flex', alignItems: 'center', gap: 6,
               color: 'var(--pp-text-2)', fontSize: 14, textDecoration: 'none', marginBottom: 24,
             }}>
-              ← <span className="jp-text">ダッシュボードへ</span>
+              <span aria-hidden="true">←</span>{' '}
+              <span className="jp-text">ダッシュボードへ</span>
               <span className="en-text">Back to Dashboard</span>
             </Link>
 
@@ -143,7 +144,8 @@ export default function DepositPage() {
                 cursor: 'pointer', marginBottom: 24,
               }}
             >
-              ← <span className="jp-text">金額選択へ戻る</span>
+              <span aria-hidden="true">←</span>{' '}
+              <span className="jp-text">金額選択へ戻る</span>
               <span className="en-text">Back to Amount</span>
             </button>
 
