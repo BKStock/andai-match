@@ -72,12 +72,13 @@ export default function DepositPage() {
 
             {/* Amount grid */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
-              {AMOUNTS.map(a => (
+              {AMOUNTS.map((a, i) => (
                 <button
                   key={a}
                   type="button"
                   className={`pp-amount-btn${selectedAmount === a ? ' active' : ''}`}
                   onClick={() => setSelectedAmount(a)}
+                  style={AMOUNTS.length % 2 !== 0 && i === AMOUNTS.length - 1 ? { gridColumn: 'span 2' } : undefined}
                 >
                   ¥{a.toLocaleString()}
                 </button>
