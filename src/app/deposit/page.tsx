@@ -168,7 +168,7 @@ export default function DepositPage() {
                 <span className="en-text">Amount to send</span>
               </span>
               <span className="mono-val" style={{ color: 'var(--pp-red)', fontSize: 20 }}>
-                ¥{selectedAmount?.toLocaleString()}
+                ¥{(selectedAmount ?? 0).toLocaleString()}
               </span>
             </div>
 
@@ -277,7 +277,7 @@ export default function DepositPage() {
                   <span className="jp-text">送金額</span>
                   <span className="en-text">Amount</span>
                 </span>
-                <span className="mono-val">¥{selectedAmount?.toLocaleString()}</span>
+                <span className="mono-val">¥{(selectedAmount ?? 0).toLocaleString()}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
                 <span style={{ color: 'var(--pp-text-2)' }}>
@@ -343,7 +343,7 @@ export default function DepositPage() {
                 <span className="jp-text">入金額</span>
                 <span className="en-text">Deposited</span>
               </span>
-              <span className="mono-val">¥{selectedAmount?.toLocaleString()}</span>
+              <span className="mono-val">¥{(selectedAmount ?? 0).toLocaleString()}</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14 }}>
               <span style={{ color: 'var(--pp-text-2)' }}>
