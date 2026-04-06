@@ -170,7 +170,7 @@ export default function DashboardPage() {
             {MOCK_TX.length === 0 ? (
               /* Empty state */
               <div className="pp-card" style={{ padding: '40px 24px', textAlign: 'center' }}>
-                <div style={{ fontSize: 40, marginBottom: 12, opacity: 0.3 }}>📋</div>
+                <div aria-hidden="true" style={{ fontSize: 40, marginBottom: 12, opacity: 0.3 }}>📋</div>
                 <div style={{ fontWeight: 600, marginBottom: 8 }}>
                   <span className="jp-text">取引履歴なし</span>
                   <span className="en-text">No transactions yet</span>
@@ -185,7 +185,7 @@ export default function DashboardPage() {
                 {MOCK_TX.map((tx) => (
                   <div key={`${tx.date}-${tx.type}`} className="tx-row" style={{ padding: '14px 16px' }}>
                     {/* Icon */}
-                    <div style={{
+                    <div aria-hidden="true" style={{
                       width: 38, height: 38, borderRadius: 12, flexShrink: 0,
                       background: TX_STYLE[tx.type].bg,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
