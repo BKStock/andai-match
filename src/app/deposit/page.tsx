@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Nav from '@/components/Nav'
 
 type Step = 'select' | 'qr' | 'waiting' | 'success'
@@ -16,12 +16,18 @@ export default function DepositPage() {
   const [step, setStep] = useState<Step>('select')
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [copied, setCopied] = useState(false)
+  const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => () => {
+    if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
+  }, [])
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(PAYPAY_ID)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
+      copiedTimerRef.current = setTimeout(() => setCopied(false), 2000)
     } catch {
       // クリップボードアクセス不可の場合は無視
     }
