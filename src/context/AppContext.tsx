@@ -20,13 +20,11 @@ const AppContext = createContext<AppContextType>({
 })
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === 'undefined') return 'dark'
+    return (localStorage.getItem('pp-theme') as Theme) || 'dark'
+  })
   const [lang, setLang] = useState<Lang>('ja')
-
-  useEffect(() => {
-    const saved = localStorage.getItem('pp-theme') as Theme | null
-    if (saved) setTheme(saved)
-  }, [])
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
