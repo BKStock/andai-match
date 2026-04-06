@@ -225,26 +225,31 @@
   min-height: 100vh;
 }
 
-/* Btn */
-.pp-btn {
+/* Btn shared base */
+.pp-btn,
+.pp-btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+/* Btn */
+.pp-btn {
   background: var(--pp-rg);
   border: none;
   color: #fff;
   padding: 15px 28px;
-  border-radius: 14px;
   font-size: 15px;
   font-weight: 700;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
   box-shadow: var(--pp-shadow-red);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   letter-spacing: 0.2px;
   width: 100%;
-  text-decoration: none;
 }
 .pp-btn:hover {
   transform: translateY(-2px);
@@ -253,21 +258,13 @@
 .pp-btn:active { transform: translateY(0); }
 
 .pp-btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   background: transparent;
   border: 1px solid var(--pp-border-strong);
   color: var(--pp-text);
   padding: 13px 22px;
-  border-radius: 14px;
   font-size: 14px;
   font-weight: 500;
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
   transition: background 0.2s, border-color 0.2s;
-  text-decoration: none;
 }
 .pp-btn-ghost:hover {
   background: var(--pp-surface);
