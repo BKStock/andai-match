@@ -3,13 +3,12 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import Nav from '@/components/Nav'
+import { RATE_USDT, RATE_CASH } from '@/lib/rates'
 
 type Step = 'select' | 'qr' | 'waiting' | 'success'
 
 const AMOUNTS = [1000, 3000, 5000, 10000, 30000]
 const PAYPAY_ID = '@paypay-match-jp'
-const RATE_USDT = 6.45   // USDT per 1000 yen
-const RATE_CASH = 0.62   // cash payout ratio (62% of deposited yen)
 const QR_FILLED_CELLS = new Set([0,1,2,7,8,14,16,17,18,19,20,21,22,24,28,29,30,31,32,33,34,36,42,43,44,45,46,47,48])
 
 export default function DepositPage() {

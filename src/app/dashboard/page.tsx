@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import { RATE_USDT, RATE_CASH, FEE_PCT } from '@/lib/rates'
 
 const MOCK_BALANCE = 12_450
 const MOCK_USDT = '80.25'
@@ -135,8 +136,8 @@ export default function DashboardPage() {
           <div className="pp-container">
             <div className="pp-card" style={{ padding: '14px 16px', display: 'flex', justifyContent: 'space-around' }}>
               {[
-                { label: 'USDT', val: '6.45 USDT', sub: '/ ¥1,000', color: 'var(--pp-green)' },
-                { label: '現金/Cash', val: '¥620', sub: '/ ¥1,000', color: 'var(--pp-gold)' },
+                { label: 'USDT', val: `${RATE_USDT} USDT`, sub: '/ ¥1,000', color: 'var(--pp-green)' },
+                { label: '現金/Cash', val: `¥${Math.round(RATE_CASH * 1000)}`, sub: '/ ¥1,000', color: 'var(--pp-gold)' },
               ].map(r => (
                 <div key={r.label} style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: 11, color: 'var(--pp-text-3)', marginBottom: 4 }}>{r.label}</div>
@@ -149,7 +150,7 @@ export default function DashboardPage() {
                   <span className="jp-text">手数料</span>
                   <span className="en-text">Fee</span>
                 </div>
-                <div className="mono-val" style={{ color: 'var(--pp-red)', fontSize: 15 }}>3.5%</div>
+                <div className="mono-val" style={{ color: 'var(--pp-red)', fontSize: 15 }}>{FEE_PCT}%</div>
                 <div style={{ fontSize: 10, color: 'var(--pp-text-3)' }}>
                   <span className="jp-text">業界最安</span>
                   <span className="en-text">Lowest</span>
