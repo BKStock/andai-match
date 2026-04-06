@@ -69,6 +69,7 @@ export default function DepositPage() {
               {AMOUNTS.map(a => (
                 <button
                   key={a}
+                  type="button"
                   className={`pp-amount-btn${selectedAmount === a ? ' active' : ''}`}
                   onClick={() => setSelectedAmount(a)}
                 >
@@ -102,6 +103,7 @@ export default function DepositPage() {
             )}
 
             <button
+              type="button"
               className="pp-btn"
               disabled={!selectedAmount}
               onClick={() => setStep('qr')}
@@ -124,6 +126,7 @@ export default function DepositPage() {
         <main style={{ padding: '80px 20px 48px' }}>
           <div style={{ maxWidth: 480, margin: '0 auto' }}>
             <button
+              type="button"
               onClick={() => setStep('select')}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -183,7 +186,7 @@ export default function DepositPage() {
                 <span className="en-text">PayPay ID</span>
               </div>
               <div className="mono-val" style={{ fontSize: 18, marginBottom: 12 }}>{PAYPAY_ID}</div>
-              <button className="copy-btn" onClick={handleCopy} style={{ margin: '0 auto' }}>
+              <button type="button" className="copy-btn" onClick={handleCopy} style={{ margin: '0 auto' }}>
                 {copied ? (
                   <><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   <span style={{ color: 'var(--pp-green)' }}>
@@ -215,7 +218,7 @@ export default function DepositPage() {
               </span>
             </div>
 
-            <button className="pp-btn" onClick={handleConfirmSent}>
+            <button type="button" className="pp-btn" onClick={handleConfirmSent}>
               <span className="jp-text">送金完了した →</span>
               <span className="en-text">I&apos;ve Sent It →</span>
             </button>
@@ -279,6 +282,7 @@ export default function DepositPage() {
             {/* Dev: simulate confirm */}
             {process.env.NODE_ENV === 'development' && (
               <button
+                type="button"
                 onClick={handleSimulateConfirm}
                 style={{
                   fontSize: 12, color: 'var(--pp-text-3)', background: 'none',

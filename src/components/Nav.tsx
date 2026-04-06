@@ -34,6 +34,7 @@ export default function Nav() {
 
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
         <button
+          type="button"
           onClick={toggleLang}
           className="pp-nav-pill"
           aria-label={lang === 'ja' ? 'Switch to English' : '日本語に切り替え'}
@@ -43,6 +44,7 @@ export default function Nav() {
           <span className="en-text">JP</span>
         </button>
         <button
+          type="button"
           onClick={toggleTheme}
           aria-label={theme === 'dark' ? 'ライトモードに切り替え' : 'ダークモードに切り替え'}
           style={{
