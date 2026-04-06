@@ -231,6 +231,14 @@
   animation: spin 0.8s linear infinite;
 }
 
+/* Nav background (translucent, theme-aware) */
+.pp-nav {
+  background: rgba(6,6,8,0.85);
+}
+[data-theme="light"] .pp-nav {
+  background: rgba(242,242,247,0.9);
+}
+
 /* Centered content container */
 .pp-container {
   max-width: 480px;

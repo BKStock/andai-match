@@ -11,11 +11,10 @@ export default function Nav() {
   const isAuthenticated = pathname === '/dashboard' || (pathname ?? '').startsWith('/deposit')
 
   return (
-    <nav aria-label={lang === 'ja' ? 'メインナビゲーション' : 'Main navigation'} style={{
+    <nav aria-label={lang === 'ja' ? 'メインナビゲーション' : 'Main navigation'} className="pp-nav" style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 300,
       padding: '0 20px', height: '60px',
       display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-      background: theme === 'dark' ? 'rgba(6,6,8,0.85)' : 'rgba(242,242,247,0.9)',
       backdropFilter: 'blur(24px)',
       WebkitBackdropFilter: 'blur(24px)',
       borderBottom: '1px solid var(--pp-border)',
