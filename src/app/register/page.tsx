@@ -71,7 +71,7 @@ export default function RegisterPage() {
             <form onSubmit={handleSubmit} noValidate>
               {/* Email */}
               <div style={{ marginBottom: 16 }}>
-                <label style={{
+                <label htmlFor="register-email" style={{
                   display: 'block', marginBottom: 8, fontSize: 13,
                   fontWeight: 600, color: 'var(--pp-text-2)',
                 }}>
@@ -79,6 +79,7 @@ export default function RegisterPage() {
                   <span className="en-text">Email Address</span>
                 </label>
                 <input
+                  id="register-email"
                   type="email"
                   className="pp-input"
                   placeholder="you@example.com"
@@ -91,7 +92,7 @@ export default function RegisterPage() {
 
               {/* Password */}
               <div style={{ marginBottom: 20 }}>
-                <label style={{
+                <label htmlFor="register-password" style={{
                   display: 'block', marginBottom: 8, fontSize: 13,
                   fontWeight: 600, color: 'var(--pp-text-2)',
                 }}>
@@ -99,6 +100,7 @@ export default function RegisterPage() {
                   <span className="en-text">Password</span>
                 </label>
                 <input
+                  id="register-password"
                   type="password"
                   className="pp-input"
                   placeholder="8文字以上 / Min 8 characters"
