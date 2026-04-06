@@ -185,13 +185,13 @@ export default function DepositPage() {
               <div className="mono-val" style={{ fontSize: 18, marginBottom: 12 }}>{PAYPAY_ID}</div>
               <button className="copy-btn" onClick={handleCopy} style={{ margin: '0 auto' }}>
                 {copied ? (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   <span style={{ color: 'var(--pp-green)' }}>
                     <span className="jp-text">コピー済</span>
                     <span className="en-text">Copied!</span>
                   </span></>
                 ) : (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" strokeWidth="1.8"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" strokeWidth="1.8"/></svg>
+                  <><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" strokeWidth="1.8"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" strokeWidth="1.8"/></svg>
                   <span className="jp-text">IDをコピー</span>
                   <span className="en-text">Copy ID</span></>
                 )}
@@ -310,7 +310,7 @@ export default function DepositPage() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             margin: '0 auto 24px',
           }}>
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none">
               <path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
