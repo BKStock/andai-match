@@ -17,7 +17,7 @@ export default function Nav() {
     }}>
       <Link href="/" style={{ textDecoration: 'none' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div style={{
+          <div aria-hidden="true" style={{
             width: 30, height: 30, borderRadius: 9,
             background: 'var(--pp-rg)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
