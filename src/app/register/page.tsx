@@ -152,11 +152,14 @@ export default function RegisterPage() {
 
               {/* Error */}
               {error && (
-                <div style={{
-                  background: 'rgba(229,57,53,0.08)', border: '1px solid rgba(229,57,53,0.2)',
-                  borderRadius: 10, padding: '10px 14px', marginBottom: 16,
-                  fontSize: 13, color: 'var(--pp-red)',
-                }}>
+                <div
+                  role="alert"
+                  style={{
+                    background: 'rgba(229,57,53,0.08)', border: '1px solid rgba(229,57,53,0.2)',
+                    borderRadius: 10, padding: '10px 14px', marginBottom: 16,
+                    fontSize: 13, color: 'var(--pp-red)',
+                  }}
+                >
                   {error}
                 </div>
               )}
