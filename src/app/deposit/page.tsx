@@ -16,9 +16,13 @@ export default function DepositPage() {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(PAYPAY_ID)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    try {
+      await navigator.clipboard.writeText(PAYPAY_ID)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // クリップボードアクセス不可の場合は無視
+    }
   }
 
   const handleConfirmSent = () => setStep('waiting')
