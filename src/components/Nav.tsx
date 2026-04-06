@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useApp } from '@/context/AppContext'
 
 export default function Nav() {
-  const { theme, toggleTheme, toggleLang } = useApp()
+  const { theme, lang, toggleTheme, toggleLang } = useApp()
 
   return (
     <nav style={{
@@ -36,6 +36,7 @@ export default function Nav() {
         <button
           onClick={toggleLang}
           className="pp-nav-pill"
+          aria-label={lang === 'ja' ? 'Switch to English' : '日本語に切り替え'}
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           <span className="jp-text">EN</span>
