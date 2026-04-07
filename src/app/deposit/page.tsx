@@ -19,6 +19,12 @@ export default function DepositPage() {
   const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const simulateTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null)
+
+  useEffect(() => {
+    stepHeadingRef.current?.focus()
+  }, [step])
+
   useEffect(() => () => {
     if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
     if (simulateTimerRef.current) clearTimeout(simulateTimerRef.current)
@@ -67,7 +73,7 @@ export default function DepositPage() {
               <span className="jp-text">PayPay入金</span>
               <span className="en-text">PayPay Deposit</span>
             </span>
-            <h1 className="syne-heading" style={{ fontSize: 26, letterSpacing: '-0.5px', marginBottom: 8 }}>
+            <h1 ref={stepHeadingRef} tabIndex={-1} className="syne-heading" style={{ fontSize: 26, letterSpacing: '-0.5px', marginBottom: 8, outline: 'none' }}>
               <span className="jp-text">金額を選択</span>
               <span className="en-text">Select Amount</span>
             </h1>
@@ -156,7 +162,7 @@ export default function DepositPage() {
               <span className="jp-text">送金先</span>
               <span className="en-text">Send To</span>
             </span>
-            <h1 className="syne-heading" style={{ fontSize: 26, letterSpacing: '-0.5px', marginBottom: 24 }}>
+            <h1 ref={stepHeadingRef} tabIndex={-1} className="syne-heading" style={{ fontSize: 26, letterSpacing: '-0.5px', marginBottom: 24, outline: 'none' }}>
               <span className="jp-text">PayPayで送金してください</span>
               <span className="en-text">Send via PayPay</span>
             </h1>
@@ -292,7 +298,7 @@ export default function DepositPage() {
               <span className="spinner" style={{ width: 32, height: 32, borderWidth: 3 }} />
             </div>
 
-            <h1 className="syne-heading" style={{ fontSize: 24, marginBottom: 12, letterSpacing: '-0.5px' }}>
+            <h1 ref={stepHeadingRef} tabIndex={-1} className="syne-heading" style={{ fontSize: 24, marginBottom: 12, letterSpacing: '-0.5px', outline: 'none' }}>
               <span className="jp-text">送金確認中...</span>
               <span className="en-text">Confirming Payment...</span>
             </h1>
@@ -364,7 +370,7 @@ export default function DepositPage() {
             </svg>
           </div>
 
-          <h1 className="syne-heading" style={{ fontSize: 28, marginBottom: 8, letterSpacing: '-0.5px', color: 'var(--pp-green)' }}>
+          <h1 ref={stepHeadingRef} tabIndex={-1} className="syne-heading" style={{ fontSize: 28, marginBottom: 8, letterSpacing: '-0.5px', color: 'var(--pp-green)', outline: 'none' }}>
             <span className="jp-text">入金完了！</span>
             <span className="en-text">Deposit Complete!</span>
           </h1>
