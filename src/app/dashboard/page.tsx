@@ -188,9 +188,9 @@ export default function DashboardPage() {
                 </p>
               </div>
             ) : (
-              <div className="pp-card" style={{ overflow: 'hidden' }}>
+              <ul className="pp-card" style={{ overflow: 'hidden', listStyle: 'none', margin: 0, padding: 0 }}>
                 {MOCK_TX.map((tx) => (
-                  <div key={`${tx.date}-${tx.type}`} className="tx-row">
+                  <li key={`${tx.date}-${tx.type}`} className="tx-row">
                     {/* Icon */}
                     <div aria-hidden="true" style={{
                       width: 38, height: 38, borderRadius: 12, flexShrink: 0,
@@ -236,9 +236,9 @@ export default function DashboardPage() {
                         )}
                       </div>
                     </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </div>
         </section>
