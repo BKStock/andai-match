@@ -15,6 +15,7 @@ export default function DepositPage() {
   const [step, setStep] = useState<Step>('select')
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
   const [copied, setCopied] = useState(false)
+  const [copyFailed, setCopyFailed] = useState(false)
   const copiedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const simulateTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -30,7 +31,9 @@ export default function DepositPage() {
       if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
       copiedTimerRef.current = setTimeout(() => setCopied(false), 2000)
     } catch {
-      // クリップボードアクセス不可の場合は無視
+      setCopyFailed(true)
+      if (copiedTimerRef.current) clearTimeout(copiedTimerRef.current)
+      copiedTimerRef.current = setTimeout(() => setCopyFailed(false), 2000)
     }
   }
 
@@ -203,9 +206,20 @@ export default function DepositPage() {
                     <span className="en-text">PayPay ID copied to clipboard</span>
                   </>
                 )}
+                {copyFailed && (
+                  <>
+                    <span className="jp-text">コピーに失敗しました。手動でIDをコピーしてください</span>
+                    <span className="en-text">Copy failed. Please copy the ID manually</span>
+                  </>
+                )}
               </div>
               <button type="button" className="copy-btn" onClick={handleCopy} style={{ margin: '0 auto' }}>
-                {copied ? (
+                {copyFailed ? (
+                  <span style={{ color: 'var(--pp-red)' }}>
+                    <span className="jp-text">コピー失敗</span>
+                    <span className="en-text">Copy Failed</span>
+                  </span>
+                ) : copied ? (
                   <><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="var(--pp-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   <span style={{ color: 'var(--pp-green)' }}>
                     <span className="jp-text">コピー済</span>
