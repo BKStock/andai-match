@@ -208,6 +208,13 @@
   .anim.visible { animation: none; }
   .live-dot { animation: none; }
   .spinner { animation: none; }
+  .pp-btn,
+  .pp-btn-ghost,
+  .pp-input,
+  .pp-amount-btn,
+  .pp-action,
+  .pp-nav-pill,
+  .copy-btn { transition: none; }
   .pp-btn:hover,
   .pp-btn-ghost:hover,
   .pp-action:hover { transform: none; }
