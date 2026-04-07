@@ -369,7 +369,7 @@
 .pp-amount-btn:hover { border-color: rgba(229,57,53,0.4); }
 .pp-amount-btn.active {
   border-color: var(--pp-red);
-  background: rgba(229,57,53,0.08);
+  background: var(--pp-red-08);
   color: var(--pp-red);
 }
 
@@ -442,7 +442,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(229,57,53,0.12);
+  background: var(--pp-red-12);
   border: 1px solid rgba(229,57,53,0.3);
   display: flex;
   align-items: center;
