@@ -23,7 +23,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === 'undefined') return 'dark'
     const saved = localStorage.getItem('pp-theme')
-    return saved === 'light' || saved === 'dark' ? saved : 'dark'
+    if (saved === 'light' || saved === 'dark') return saved
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
   })
   const [lang, setLang] = useState<Lang>(() => {
     if (typeof window === 'undefined') return 'ja'
