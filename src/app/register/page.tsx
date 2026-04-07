@@ -169,6 +169,8 @@ export default function RegisterPage() {
                 <div
                   id="register-error"
                   role="alert"
+                  aria-live="polite"
+                  aria-atomic="true"
                   style={{
                     background: 'var(--pp-red-08)', border: '1px solid var(--pp-red-20)',
                     borderRadius: 10, padding: '10px 14px', marginBottom: 16,
@@ -180,7 +182,7 @@ export default function RegisterPage() {
               )}
 
               {/* Submit */}
-              <button type="submit" className="pp-btn" disabled={loading}>
+              <button type="submit" className="pp-btn" disabled={loading} aria-busy={loading}>
                 {loading ? (
                   <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                     <span aria-hidden="true" className="spinner" style={{ width: 18, height: 18 }} />

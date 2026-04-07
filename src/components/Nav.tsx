@@ -44,8 +44,8 @@ export default function Nav() {
           aria-label={lang === 'ja' ? 'Switch to English' : '日本語に切り替え'}
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
-          <span className="jp-text">EN</span>
-          <span className="en-text">JP</span>
+          <span className="jp-text" aria-hidden="true">EN</span>
+          <span className="en-text" aria-hidden="true">JP</span>
         </button>
         <button
           type="button"
