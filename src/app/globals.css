@@ -131,7 +131,7 @@
 
 /* ===== PayPay Match Custom Tokens ===== */
 :root {
-  color-scheme: dark;
+  color-scheme: dark light;
   --pp-bg: #060608;
   --pp-surface: #0F0F14;
   --pp-elevated: #161620;
