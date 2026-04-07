@@ -17,11 +17,12 @@ export default function RegisterPage() {
     e.preventDefault()
     setError('')
 
-    if (!email || !password) {
+    const trimmedEmail = email.trim()
+    if (!trimmedEmail || !password) {
       setError('メールとパスワードを入力してください。')
       return
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       setError('有効なメールアドレスを入力してください。')
       return
     }
