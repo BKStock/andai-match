@@ -163,18 +163,18 @@ export default function LPPage() {
               <span className="en-text">3 Simple Steps</span>
             </h2>
           </div>
-          <div className="pp-card anim d1" style={{ overflow: 'hidden' }}>
+          <ol className="pp-card anim d1" style={{ overflow: 'hidden', listStyle: 'none', margin: 0, padding: 0 }}>
             {[
               { n: '01', tj: 'PayPay送金', te: 'Send PayPay', dj: '指定IDにPayPayで送金。マネーライト対応。', de: 'Send PayPay to our ID. MoneyLight supported.' },
               { n: '02', tj: 'ポイント確認', te: 'Points Confirmed', dj: '受取確認後、即座にポイントへ変換します。', de: 'After confirmation, points are converted instantly.' },
               { n: '03', tj: 'USDT / 現金受取', te: 'Receive USDT / Cash', dj: '選択した方法で即時送金。最短5分。', de: 'Instant transfer via your chosen method. Min 5 mins.' },
             ].map((s, i) => (
-              <div key={s.n} style={{
+              <li key={s.n} style={{
                 display: 'flex', gap: 16, padding: '20px',
                 borderBottom: i < 2 ? '1px solid var(--pp-border)' : 'none',
                 alignItems: 'flex-start',
               }}>
-                <div className="step-circle">{s.n}</div>
+                <div aria-hidden="true" className="step-circle">{s.n}</div>
                 <div>
                   <div style={{ fontWeight: 700, marginBottom: 4, fontSize: 15 }}>
                     <span className="jp-text">{s.tj}</span>
@@ -185,9 +185,9 @@ export default function LPPage() {
                     <span className="en-text">{s.de}</span>
                   </div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
