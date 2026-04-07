@@ -117,21 +117,23 @@ export default function DashboardPage() {
               <span className="jp-text">クイックアクション</span>
               <span className="en-text">Quick Actions</span>
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, listStyle: 'none', margin: 0, padding: 0 }}>
               {QUICK_ACTIONS.map(a => (
-                <Link key={a.label_jp} href={a.href} className="pp-action">
-                  <div aria-hidden="true" style={{ color: a.color }}>{a.icon}</div>
-                  <div style={{ fontSize: 12, fontWeight: 700, textAlign: 'center', lineHeight: 1.3 }}>
-                    <span className="jp-text">{a.label_jp}</span>
-                    <span className="en-text">{a.label_en}</span>
-                  </div>
-                  <div style={{ fontSize: 10, color: 'var(--pp-text-3)' }}>
-                    <span className="jp-text">{a.sub_jp}</span>
-                    <span className="en-text">{a.sub_en}</span>
-                  </div>
-                </Link>
+                <li key={a.label_jp}>
+                  <Link href={a.href} className="pp-action">
+                    <div aria-hidden="true" style={{ color: a.color }}>{a.icon}</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, textAlign: 'center', lineHeight: 1.3 }}>
+                      <span className="jp-text">{a.label_jp}</span>
+                      <span className="en-text">{a.label_en}</span>
+                    </div>
+                    <div style={{ fontSize: 10, color: 'var(--pp-text-3)' }}>
+                      <span className="jp-text">{a.sub_jp}</span>
+                      <span className="en-text">{a.sub_en}</span>
+                    </div>
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
