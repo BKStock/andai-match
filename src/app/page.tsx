@@ -200,14 +200,14 @@ export default function LPPage() {
               <span className="en-text">Features</span>
             </h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, listStyle: 'none', margin: 0, padding: 0 }}>
             {[
               { icon: '🇯🇵', tj: '日本唯一', te: 'Japan Exclusive', dj: 'マネーライト換金対応', de: 'MoneyLight exchange' },
               { icon: '⚡', tj: '即時処理', te: 'Instant', dj: '最短5分で着金', de: 'Arrives in 5 min' },
               { icon: '🔒', tj: '安全・匿名', te: 'Secure & Private', dj: 'SSL + 本人確認', de: 'SSL + KYC verified' },
               { icon: '💱', tj: '低手数料', te: 'Low Fees', dj: `業界最安 ${FEE_PCT}%`, de: `Industry low ${FEE_PCT}%` },
             ].map(f => (
-              <div key={f.tj} className="pp-card anim d1" style={{ padding: '18px 16px' }}>
+              <li key={f.tj} className="pp-card anim d1" style={{ padding: '18px 16px' }}>
                 <div aria-hidden="true" style={{ fontSize: 22, marginBottom: 10 }}>{f.icon}</div>
                 <div style={{ fontWeight: 700, marginBottom: 4, fontSize: 14 }}>
                   <span className="jp-text">{f.tj}</span>
@@ -217,9 +217,9 @@ export default function LPPage() {
                   <span className="jp-text">{f.dj}</span>
                   <span className="en-text">{f.de}</span>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
