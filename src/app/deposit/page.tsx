@@ -83,7 +83,7 @@ export default function DepositPage() {
             </p>
 
             {/* Amount grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
+            <div role="group" aria-label="送金金額 / Select amount" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20 }}>
               {AMOUNTS.map((a, i) => (
                 <button
                   key={a}
